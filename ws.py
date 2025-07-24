@@ -18,11 +18,16 @@ def main():
     # 2. ซื้อตั๋วหนัง
 
     # รับค่าตัวเลือกเมนูจากผู้ใช้
-    menu = int(input("เลือกเมนู: "))
+    menu = int(input("เลือกเมนู: (1)แสดงหนังทั้งหมด (2)ซื้อตั๋วหนัง: "))
     if menu == 1:
-        print(movies)
-  
-
+        for s in movies:
+            print({s['movie_name']})
+    elif menu == 2:
+        for s in movies:
+            print(f"ชื่อหนัง: {s['movie_name']} | ราคาหนัง: {s['ticket_price']}")
+            if        
+    else:
+        print("เมนูไม่ถูกต้อง")
     # TODO: ตรวจสอบเมนูที่เลือก
     # ถ้าเลือก 1 ให้เรียก show_movies พร้อมส่ง movies
     # ถ้าเลือก 2 ให้เรียก buy_ticket พร้อมส่ง movies
